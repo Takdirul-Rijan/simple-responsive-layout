@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Responsive layout - Task four </title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container{
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas: 
+            "image-one card-one"
+            "image-two card-two";
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+        }
+        .image-one{
+            grid-area: image-one;
+            
+        }
+        .card-one{
+            grid-area: card-one;
+            padding: 15px;
+            border: 1px solid aqua;
+            border-radius: 10px;
+        }
+        .image-two{
+            grid-area: image-two;
+            
+
+        }
+        .card-two{
+            grid-area: card-two;
+            padding: 15px;
+            border: 1px solid aqua;
+            border-radius: 10px;
+        }
+        img{
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+           border-radius: 10px;
+           
+        }
+        h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        p {
+            color: #666;
+            line-height: 1.5;
+        }
+        button{
+            color: white;
+            background-color: blueviolet;
+            border-radius: 5px;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: darkgoldenrod;
+        }
+        @media screen and (max-width: 576px) {
+            .container{
+                grid-template-areas:
+                "image-one"
+                "card-one"
+                "image-two"
+                "card-two";
+                grid-template-columns: 1fr;
+            }
+            
+        }
+
+</style>
+</head>
+<body>
+ <div class="container">
+       
+    <div class="image-one"><img src="./images/street food.jpg" alt=""></div>
+    <div class="card-one">
+        <h3>Post Title Will Be Here</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum debitis, laboriosam deleniti nemo autem impedit et voluptates non placeat porro aliquid maxime hic obcaecati odit dicta illo corporis consectetur culpa.</p>
+        <button>Read More</button>
+    </div>
+    
+    <div class="image-two"><img src="./images/streetffod2.jpg" alt=""></div>
+    <div class="card-two">
+        <h3>Post Title Will Be Here</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dolorum voluptatum iste sed, qui laboriosam optio voluptate nostrum quis unde porro et adipisci in repudiandae nulla. Assumenda odit quo dolor.</p>
+        <button>Read More</button>
+    </div>
+    
+ </div>
+</body>
+</html>
