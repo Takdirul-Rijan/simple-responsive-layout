@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Responsive layout - Task four</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container{
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas:
+            "image-one card-one"
+            "card-two image-two";
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+        }
+        .image-one{
+            grid-area:image-one;
+        }
+        .card-one{
+            grid-area:card-one;
+        }
+        .card-two{
+            grid-area: card-two;
+        }
+        .image-two{
+            grid-area: image-two;
+        }
+        img{
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+           border-radius: 10px;
+        }
+        @media screen and (max-width: 576px) {
+            .container{
+               grid-template-areas: 
+               "image-one"
+               "card-one"
+               "image-two"
+               "card-two";
+               grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-one"><img src="./images/vancouver-city.jpg" alt=""></div>
+        <div class="card-one">
+            <h2>Why do we live here</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio ipsam quae reiciendis magni voluptates reprehenderit cum corporis labore deleniti eaque mollitia vel, nemo quis, quo similique animi, velit voluptate hic.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita non quaerat, nemo delectus beatae voluptate iusto nam in cumque eligendi modi aperiam quod voluptas ab. Delectus esse error consequuntur obcaecati. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam id dolores odit quasi? Eius consectetur nostrum, quia tempora quam, suscipit modi at voluptatem ea reiciendis eos. Alias dolore aut accusamus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque est iste obcaecati omnis, eum nobis velit impedit corporis facilis beatae nemo eligendi quaerat? Quam quos vero sequi ut nostrum quo? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis veniam eaque dolore excepturi tempora illum corrupti odit id exercitationem ipsa est placeat natus, incidunt, minima delectus harum sed eius praesentium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quod dicta possimus nisi cum incidunt corrupti sed nihil consectetur, earum perspiciatis sint, aliquam quidem, eaque blanditiis minus velit neque quam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, sint! Aliquid voluptatem velit voluptate provident facilis nostrum mollitia, magnam rerum nihil, iste fuga perferendis perspiciatis eos. Ipsam dicta ipsum accusamus. Lorem ipsum dolor sit amet, consectetur adipisicing </p>
+        </div>
+        
+        <div class="card-two">
+            <h2>Why you should like it</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos ea dolorem expedita eveniet alias ab dicta inventore. Culpa, placeat magnam, vero nulla dolores voluptatem delectus iste molestiae blanditiis doloremque assumenda.</p>
+        </div>
+        <div class="image-two"><img src="./images/vancouver.jpg" alt=""></div>
+    </div>
+</body>
+</html>
