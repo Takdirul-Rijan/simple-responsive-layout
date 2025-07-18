@@ -51,6 +51,18 @@
         border-radius: 10px;
         text-align: center;
     }
+    @media screen and (max-width: 576px) {
+        .container{
+            grid-template-areas:
+            "box1"
+            "box2"
+            "box3"
+            "box4";
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            height: auto;
+        }
+    }
   </style>
 </head>
 <body>
